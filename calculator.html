@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Solar Arbitrage Advisor</title>
+<style>
+  body { font-family: sans-serif; margin:0; padding:0; background:#f9f9f9; }
+  header { background:#4CAF50; color:white; padding:2em 1em; text-align:center; }
+  header h1 { margin:0 0 0.5em 0; }
+  header p { margin:0; font-size:1.2em; }
+  main { max-width:800px; margin:2em auto; padding:1em; background:white; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
+  section { margin-bottom:2em; }
+  button { background:#4CAF50; color:white; border:none; padding:1em 2em; border-radius:5px; font-size:1em; cursor:pointer; }
+  button:hover { background:#45a049; }
+  .feature { margin:1em 0; }
+  .feature strong { display:block; margin-bottom:0.3em; }
+  iframe { width:100%; height:500px; border:none; margin-top:1em; }
+  footer { text-align:center; padding:2em 1em; color:#666; font-size:0.9em; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Solar Arbitrage Advisor</h1>
+  <p>Stop leaving $1,000+/year on the grid. See exactly how much you can recover.</p>
+</header>
+
+<main>
+  <section id="demo">
+    <h2>Live Calculator</h2>
+    <p>Adjust your household’s solar, loads, and tariffs to see potential savings.</p>
+    <!-- Embed your interactive calculator HTML here -->
+    <iframe src="calculator.html"></iframe>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+    <div class="feature">
+      <strong>Interactive Sliders</strong>
+      Adjust generation, export, appliances, and more in real-time.
+    </div>
+    <div class="feature">
+      <strong>Load Shift Recommendations</strong>
+      See which appliances you can move to solar hours to recover lost revenue.
+    </div>
+    <div class="feature">
+      <strong>PDF Summary</strong>
+      Download a personalized report detailing your savings and recommended shifts.
+    </div>
+    <div class="feature">
+      <strong>Scenario Templates</strong>
+      Start with pre-filled household types for quick insights.
+    </div>
+  </section>
+
+  <section id="cta">
+    <h2>Recover Your Lost Solar Value</h2>
+    <p>Get your full PDF summary with actionable recommendations.</p>
+    <button onclick="window.location.href='calculator.html#downloadPDF'">Download PDF Summary ($39)</button>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Solar Arbitrage Advisor. Designed for Australian households. All values are estimates.
+</footer>
+
+</body>
+</html>

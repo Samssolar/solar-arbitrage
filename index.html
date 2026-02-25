@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Solar Arbitrage Advisor</title>
+
+</head>
+
+<body>
+
+<h1>Solar Arbitrage Advisor</h1>
+
+<input id="email" placeholder="your email">
+
+<br><br>
+
+<button id="checkout-button">
+Buy report ($39)
+</button>
+
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+
+const BACKEND_URL =
+"https://solar-backend-6e2q.onrender.com";
+
+const stripe =
+Stripe("sk_test_51T2mIVAs3dFAzYDOKXEpACLrVCOaFEUt8ZGKzc68yzTiT5rWSPOCTTDpSfs0LGBCh3PojW8dLhmfM3tLjf6eWTWA00rKm2S9SM");
+
+
+document
+.getElementById("checkout-button")
+.addEventListener("click", async ()=>{
+
+const email =
+document.getElementById("email").value;
+
+const response =
+await fetch(
+BACKEND_URL +
+"/create-checkout-session",
+{
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+email:email,
+
+dailyConsumption:32,
+
+export:12,
+
+savings:1100
+
+})
+
+});
+
+const session =
+await response.json();
+
+stripe.redirectToCheckout({
+
+sessionId:session.id
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

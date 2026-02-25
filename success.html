@@ -1,0 +1,24 @@
+<h1>Payment successful</h1>
+
+<a id="download">Download your report</a>
+
+<script>
+
+const params =
+new URLSearchParams(
+window.location.search);
+
+const file =
+params.get("file");
+
+if(file){
+
+document
+.getElementById("download")
+.href =
+"https://solar-backend-6e2q.onrender.com/pdfs/"
++ file;
+
+}
+
+</script>
