@@ -9,7 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.get("/", (req, res) => {
-  res.send("Solar backend running");
+  res.send("Solar backend is running");
 });
 
 
